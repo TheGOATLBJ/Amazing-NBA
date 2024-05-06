@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Amazing NBA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .black-bg {
+        width : 100%;
+        height : 100%;
+        position : fixed;
+        background : rgba(0,0,0,0.5);
+        z-index : 5;
+        padding: 30px;
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s;
+        }
+        .white-bg {
+        background: white;
+        border-radius: 5px;
+        padding: 30px;
+        } 
+        .show-modal{
+        visibility: visible;
+        opacity: 1;
+        }
+        #굿{
+        width : 400vw;
+            
+        }
+        .뉴스{  
+            width : 100vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="black-bg">
+        <div class="white-bg">
+          <div class="text-2xl">로그인하세요</div>
+          <form action="succes.html">
+          <div>
+            <input type="text" class="text-2xl border">
+          </div>
+          <div class="text-2xl">비밀번호입력하세요</div>
+          <div>
+            <input type="text" class="text-2xl border">
+          </div>
+          <button id="전송"  type="submit" class="rounded-md bg-blue-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mt-2" id="close">전송</button>
+          </form>
+
+          <button id="닫기"  type="button" class="rounded-md bg-red-500 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500 mt-2" id="close">닫기</button>
+        </div>
+      </div> 
+
+    <div class="pt-10 text-5xl text-center">
+        <a href="Amazing NBA.html">Amazing NBA</a>
+    </div>
+    <div class="mt-8 mr-10 text-right">
+    <button id="login" type="button" class="rounded bg-white px-2 py-1 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 ">로그인</button>
+    </div>
+    <div class="flex bg-yellow-500 justify-evenly mt-4 p-2">
+        <a href="구단순위.html">구단순위</a>
+        <a href="선수지표.html">선수지표</a>
+        <a href="부상.html">부상</a>
+        <a href="게시판.html">게시판</a>
+    </div>
+    
+    <div class="flex justify-end mt-12 mr-20">
+    <button id="관심선수" >
+    <i class="fa-solid fa-basketball fa-xl" style="color: #B197FC;"></i>
+    <div class="text-large " style="color: #B197FC;">
+        관심선수 등록
+    </div>
+    </button>
+    </div>
+    <div class="flex justify-center  gap-10 mt-4" >
+        <img src="홀스슈.jpg" width="20%" >
+        <img src="지온캐년.jpg" width="20%">
+        <img src="bbq.jpg" width="20%">
+        <img src="산타모니카.jpg" width="20%">
+    </div>
+   
+    <div class="mt-14 ml-28">
+        NBA 관련뉴스
+    </div>
+    <div class="flex mt-6 ml-28 gap-20">
+        <div>
+            어빙의 지구는 평평하다.
+        </div>
+        <div>
+            르브론제임스 탈락.
+        </div>
+        <div>
+            미국 국가대표 라인업 발표.
+        </div>
+        <div>
+            니콜라 요기있지~
+        </div>
+    </div>
+
+    <div style="overflow: hidden;">
+        <div id="굿" class="flex">
+        <iframe src="https://news.sbs.co.kr/news/endPage.do?news_id=N1007635707&plink=ORI&cooper=NAVER" class="뉴스"  height="600" frameborder="0" scrolling="yes"></iframe>
+        <iframe src="https://m.sports.naver.com/basketball/article/065/0000262469" class="뉴스"  height="600" frameborder="0" scrolling="yes"></iframe>
+        <iframe src="https://m.sports.naver.com/basketball/article/065/0000262469" class="뉴스"  height="600" frameborder="0" scrolling="yes"></iframe>
+        <iframe src="https://m.sports.naver.com/basketball/article/065/0000262469" class="뉴스"  height="600" frameborder="0" scrolling="yes"></iframe>
+        </div>
+    </div>
+    
+
+    <script>
+        $('#login').on('click',function(){
+        document.querySelector('.black-bg').classList.add('show-modal')})
+        
+        $('#닫기').on('click',function(){
+        document.querySelector('.black-bg').classList.remove('show-modal')})
+
+    </script>
+</body>
+</html>
